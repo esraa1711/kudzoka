@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --main-color: #72398a;
+  --second-color: #333;
+  --third-color: #646363;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end common rules */
+
+/* Start Header */
+header {
+  background-image: url(./imgs/blue_bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul li img {
+  width: 50px;
+}
+
+header nav ul li a {
+  color: var(--second-color);
+  font-weight: 500;
+}
+header nav ul li a:hover{
+    border-bottom: 1px solid var(--main-color);
+}
+header button {
+  width: 80px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.landing .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 40px;
+  padding-top: 100px;
+  align-items: center;
+}
+.col-content {
+  text-transform: capitalize;
+}
+.col-content h1 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.col-content p {
+  color: var(--third-color);
+  line-height: 1.5;
+}
+
+.highlight {
+  color: var(--main-color);
+}
+
+.landing .row .col-imgs {
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+}
+.landing .row .col-imgs .land {
+  width: 600px;
+  /* background-color: #333; */
+}
+
+.landing .row .col-imgs .man {
+  position: absolute;
+  top: 3%;
+  width: 260px;
+  height: 400px;
+  transform: translate(50%);
+}
+
+.landing .row .col-imgs .cloud {
+  position: absolute;
+  top: 55%;
+  height: 40%;
+  z-index: 1;
+}
+
+/* media quiry */
+
+@media (min-width: 670px) and (min-width: 1200px) {
+  .landing .row .col-imgs .man {
+    position: absolute;
+    top: 3%;
+    right: 55%;
+    width: 260px;
+    height: 400px;
+  }
+
+  .landing .row .col-imgs .cloud {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    height: 40%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    gap: 10px;
+  }
+  header {
+    text-align: center;
+  }
+
+  .landing .row .col-imgs .man {
+    position: absolute;
+    top: 3%;
+    right: 55%;
+    width: 260px;
+    height: 400px;
+  }
+
+  .landing .row .col-imgs .cloud {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    height: 40%;
+    z-index: 1;
+  }
+  .waves {
+    display: none;
+  }
+}
+
+.waves {
+  position: absolute;
+  top: 110%;
+  right: 18%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* End Header */
+
+/* Start Services */
+.services .row {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: stretch;
+  overflow: hidden;
+  row-gap: 80px;
+}
+.serv-one {
+  padding: 10px;
+  text-align: center;
+}
+.serv-one .serv-img {
+  width: 250px;
+  margin: auto;
+}
+
+.serv-one:nth-child(2) {
+  transform: translateY(50%);
+  overflow: hidden;
+}
+
+.serv-one:nth-child(3) {
+  transform: translateY(120%);
+}
+
+.serv-one:nth-child(4) {
+  position: relative;
+}
+
+.serv-one:nth-child(4) p {
+  position: absolute;
+  bottom: 40%;
+  left: 30%;
+  text-align: start;
+  color: white;
+}
+
+.bold {
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
+  /* color: white; */
+}
+
+.services .container .line {
+  position: absolute;
+  z-index: -1;
+  top: 163%;
+  width: 70%;
+  height: 70%;
+  left: 20%;
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+p{
+    color: #646363;
+}
+/* End Services */
+
+.img-scroll .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 100px;
+  align-items: center;
+  gap: 50px;
+  /* overflow: hidden; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.img-scroll .img-1 img {
+  width: 60%;
+  transform: translateY(25%);
+  float: right;
+}
+
+.img-scroll .img-3 img {
+  width: 60%;
+  /* transform: translateX(50%); */
+  transform: translateY(25%);
+}
+
+.img-scroll .img-2 {
+  height: 400px;
+  width: 360px;
+  transform: translateY(-10%);
+  text-align: center;
+}
+
+.img-2 h3 {
+  margin-bottom: 20px;
+}
+
+.img-3 p {
+  font-size: 20px;
+}
+.img-scroll .img-2 i {
+  position: absolute;
+  top: 85%;
+  transition: 0.5s all ease-out;
+}
+
+.img-scroll .img-2 i:hover {
+  font-size: 23px;
+  color: #7c448962;
+}
+
+/* ............................ */
+
+/* start footer */
+footer {
+  overflow: hidden;
+  position: relative;
+  /* margin-top: -50px; */
+  padding-top: 170px;
+}
+
+.foooter-img {
+  position: absolute;
+  z-index: -1;
+  bottom: -60%;
+  left: -38px;
+  right: -7%;
+}
+
+footer i {
+  color: white;
+}
+.icons {
+  display: flex;
+  gap: 10px;
+  /* margin-top: 80px; */
+}
+
+.playstore {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 2px solid white;
+  align-items: center;
+  text-align: center;
+  padding: 10px 15px;
+  height: fit-content;
+  border-radius: 15px;
+  background-color: white;
+}
+.playstore p {
+  font-size: 10px;
+  padding-left: 5px;
+}
+h5 {
+  color: rgba(0, 0, 0, 0.584);
+}
+.social-media {
+  margin-top: 20px;
+  padding-bottom: 25px;
+}
+.social-media img {
+  width: 30px;
+  padding: 7px;
+}
+.links-footer ul {
+  display: flex;
+  gap: 35px;
+  padding-bottom: 40px;
+}
+.links-footer ul li a {
+  color: white;
+}
+.man-footer {
+  position: absolute;
+  left: 49%;
+  right: 0;
+  width: 500px;
+  top: 6%;
+  height: 94%;
+}
